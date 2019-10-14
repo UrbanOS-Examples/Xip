@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message Message {
+    string metadata = 1;
+    string dataset_id = 2;
+    Operational operational = 3;
+    string payload = 4;
+    string version = 5;
+}
+
+message Operational {
+    repeated Timing timing = 1;
+}
+
+message Timing {
+    string app = 1;
+    string end_time = 2;
+    string label = 3;
+    string start_time = 4;
+}
